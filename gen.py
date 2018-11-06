@@ -22,13 +22,8 @@ def gen(length):
         r.seed()
 
 while True:
-#    try:
+
     pwd_length = input("Please enter the length for password generation or type (q)uit to exit: ")
-#        if pwd_length == 'q':
-#            sys.quit()
-#        else:
-#            pwd_length = int(pwd_length)
-#        break
     if pwd_length.lower() == 'q' or pwd_length.lower() == 'quit':
         sys.exit()
     try:
