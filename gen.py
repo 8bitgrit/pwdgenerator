@@ -8,6 +8,7 @@ not cryptographically secure
 import string as s
 import random as r
 import time as t
+import sys
 
 #set some variables
 
@@ -19,9 +20,19 @@ def gen(length):
     for i in range(length):
         print(r.choice(characters),end='')
         r.seed()
+
 while True:
+#    try:
+    pwd_length = input("Please enter the length for password generation or type (q)uit to exit: ")
+#        if pwd_length == 'q':
+#            sys.quit()
+#        else:
+#            pwd_length = int(pwd_length)
+#        break
+    if pwd_length.lower() == 'q' or pwd_length.lower() == 'quit':
+        sys.exit()
     try:
-        pwd_length = int(input("Please enter the length for password generation or type (q)uit to exit: "))
+        pwd_length = int(pwd_length)
         break
     except:
         print('You did not enter a valid number')
